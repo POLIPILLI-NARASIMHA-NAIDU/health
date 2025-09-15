@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health Link</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-left">
+      <div class="logo">Health<span class="logo-accent">Link</span></div>
+    </div>
+    <div class="nav-right">
+      <button id="darkToggle" class="dark-toggle" aria-pressed="false">☾ Dark</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="heroEffect"></canvas>
+    <div class="hero-inner">
+      <h1 class="hero-title">Your Health, <span id="typewriter"></span></h1>
+      <p class="hero-sub">AI-powered tools for better healthcare decisions, faster and smarter.</p>
+
+      <!-- START BUTTON -->
+      <button id="startBtn" class="uiverse-btn">
+        <span class="span-mother">
+          <span>S</span><span>T</span><span>A</span><span>R</span><span>T</span><span>!</span>
+        </span>
+        <span class="span-mother2">
+          <span>S</span><span>T</span><span>A</span><span>R</span><span>T</span><span>!</span>
+        </span>
+      </button>
+
+      <p class="hero-cta-note">Scroll down to explore our services.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT OUR BOT -->
+  <section class="about">
+    <div class="container">
+      <h2>Meet Our AI Health Assistant 🤖</h2>
+      <p class="about-text">
+        Our AI-powered bot uses state-of-the-art natural language processing and machine learning to
+        understand symptoms, suggest possible conditions, and recommend next steps. It supports voice input,
+        learns from user feedback, and provides 24/7 support for diet advice, mental health tips, and queue management.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">AI-driven healthcare tools for everyone</p>
+
+      <div class="cards">
+        <article class="card" style="--accent:#2563EB;">
+          <h3>AI Symptom Checker</h3>
+          <p class="card-desc">Instant, AI-powered symptom analysis and suggested actions.</p>
+          <button class="btn small voice-open">🎤 Try Voice</button>
+        </article>
+
+        <article class="card" style="--accent:#06B6D4;">
+          <h3>Diet Advisor</h3>
+          <p class="card-desc">Get daily meal recommendations tailored to your health goals.</p>
+        </article>
+
+        <article class="card" style="--accent:#10B981;">
+          <h3>Mental Health Bot</h3>
+          <p class="card-desc">24/7 mental health companion with mindfulness exercises.</p>
+        </article>
+
+        <article class="card" style="--accent:#9333EA;">
+          <h3>Queue Manager</h3>
+          <p class="card-desc">Book appointments, reduce waiting times and manage clinic flow.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS SECTION -->
+  <section class="benefits">
+    <div class="container">
+      <h2>Why Choose HealthLink?</h2>
+      <ul class="benefit-list">
+        <li>⚡ Fast & reliable AI results</li>
+        <li>🔊 Voice-enabled interaction</li>
+        <li>📊 Dashboard with health metrics</li>
+        <li>🔒 Secure and privacy-friendly</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHATBOT -->
+  <button id="chatbotFab" class="chatbot-fab">💬</button>
+  <div id="chatWindow" class="chat-window">
+    <header class="chat-header">
+      <div class="chat-title">HealthLink Bot</div>
+      <button id="chatClose" class="btn icon">✖</button>
+    </header>
+    <div id="chatBody" class="chat-body"></div>
+    <footer class="chat-footer">
+      <input id="chatInput" class="chat-input" placeholder="Ask something..." />
+      <button id="chatSend" class="btn small primary">Send</button>
+    </footer>
+  </div>
+
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <strong><a href="about.html" class="footer-link">About</a></strong>
+      <p class="small">Demo healthcare AI platform.</p>
+    </div>
+    <div>
+      <strong><a href="contact.html" class="footer-link">Contact</a></strong>
+      <p class="small">support@healthlink.example</p>
+    </div>
+    <div>
+      <strong><a href="team.html" class="footer-link">Team</a></strong>
+      <p class="small">Nani · Mahesh · Rohit E · Rohit S</p>
+    </div>
+  </div>
+
+  <!-- REPORT BUTTON -->
+  <div class="report-section">
+    <a href="report.html" class="report-btn">⚠ Report an Issue</a>
+  </div>
+
+  <div class="copyright">© 2025 HealthLink</div>
+</footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="functional.js"></script>
+</body>
+</html>
