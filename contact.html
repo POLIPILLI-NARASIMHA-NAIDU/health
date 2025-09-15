@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | HealthLink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --bg-dark: #000000;
+      --text-light: #222;
+      --text-dark: #ffffff;
+      --accent: #2563EB;
+      --transition: 0.3s ease;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      transition: background var(--transition);
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    .dark-toggle {
+      background: none;
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .dark-toggle:hover {
+      background: #f0f0f0;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1.page-title {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, background var(--transition);
+      text-align: center;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    .contact-card p {
+      margin: 8px 0;
+      font-size: 0.95rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: var(--accent);
+      transition: transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
+
+    .address, .support {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #555;
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+    }
+
+    /* DARK MODE */
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.dark-mode header {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    body.dark-mode .contact-card {
+      background: #111;
+      box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+    }
+
+    body.dark-mode .dark-toggle {
+      border: 1px solid #555;
+      color: #fff;
+    }
+
+    body.dark-mode footer {
+      border-color: #333;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">HealthLink</div>
+    <button id="darkToggle" class="dark-toggle">☾ Dark</button>
+  </header>
+
+  <main>
+    <h1 class="page-title">Contact Us</h1>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>👤 Name</h3>
+        <p>Nani</p>
+      </div>
+      <div class="contact-card">
+        <h3>📞 Phone</h3>
+        <p>99999 88888</p>
+      </div>
+      <div class="contact-card">
+        <h3>📧 Email</h3>
+        <p>email@gmail.com</p>
+      </div>
+      <div class="contact-card">
+        <h3>🌐 Social</h3>
+        <div class="social-links">
+          <a href="#">💬</a> <!-- WhatsApp -->
+          <a href="#">📘</a> <!-- Facebook -->
+          <a href="#">📸</a> <!-- Instagram -->
+          <a href="#">💻</a> <!-- GitHub -->
+          <a href="#">🔗</a> <!-- LinkedIn -->
+          <a href="#">✈</a> <!-- Telegram -->
+        </div>
+      </div>
+    </div>
+
+    <div class="address">
+      <h3>📍 Address</h3>
+      <p>123 Health Street, Wellness City, Careland 400021</p>
+    </div>
+
+    <div class="support">
+      <h3>❤️ Contributions</h3>
+      <p>You can support this project via <a href="#">Patreon</a> or share it with your friends.</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 HealthLink. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Dark Mode Toggle
+    const darkToggle = document.getElementById("darkToggle");
+    darkToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      darkToggle.textContent = document.body.classList.contains("dark-mode") ? "☀ Light" : "☾ Dark";
+    });
+  </script>
+</body>
+</html>
